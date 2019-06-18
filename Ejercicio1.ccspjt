@@ -1,0 +1,16 @@
+[PROJECT]
+Target=Ejercicio1.hex
+Processor_Text=PIC18F4620
+CCSVersion=5.012
+Compiler=PCH
+[Target Data]
+FileList=Ejercicio1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Ejercicio1.c]
+Type=4
+[mru-list]
+1=Ejercicio1.c
+[Units]
+Count=1
+1=Ejercicio1 (main)
