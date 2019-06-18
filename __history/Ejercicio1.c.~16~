@@ -23,9 +23,9 @@
 //{ 
 //}
 void main(void){
-set_tris_c(0x33); 
+set_tris_c(0x55); 
 while(1){
-    output_c(0xcc);
+    output_c(0xaa);
     delay_ms(200);
     output_c(0x00);
     delay_ms(100);

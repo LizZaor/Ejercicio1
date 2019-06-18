@@ -1,6 +1,6 @@
 
-ROM used:   108/65536 (0%)
-            108/65536 (0%) including unused fragments
+ROM used:   94/65536 (0%)
+            94/65536 (0%) including unused fragments
 
             0.0 Average locations per line
             0.3 Average locations per statement
@@ -13,7 +13,7 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   34     7   2  Ejercicio1.c
+   35     7   2  Ejercicio1.c
   834     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h
  1351   359  98  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
    32     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
@@ -21,30 +21,30 @@ Lines Stmts  %   Files
    28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
    37     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
 ----- -----
- 2739   366 Total
+ 2740   366 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     40  19    1             @delay_ms1
-0     64  30    0   113  1.7  MAIN
- Inline         0             @cinit1
+0     40  21    1             @delay_ms1
+0     50  27    0   113  1.7  MAIN
+ Inline         0   113  1.7  @cinit1
 
 Program metrics:
-    Functions               1
+    Functions               2
     Statements              366
-    Comments                709
-    Volume (V)              117
-    Difficulty (D)          1.5
-    Effort to implement (E) 175
-    Time to implement (T)   0 minutes
+    Comments                717
+    Volume (V)              281
+    Difficulty (D)          3.3
+    Effort to implement (E) 931
+    Time to implement (T)   1 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    30
+    Maintainability (MI)    17
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
-00004-0FFFE   104  65428  
+00004-0FFFE    90  65442  
 
 
 

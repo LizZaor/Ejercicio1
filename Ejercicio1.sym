@@ -9,26 +9,26 @@
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @READ_PACKED_MEMORY.P1
 FE1-FE2 @WRITE_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
-FE9-FEA @READ_PACKED_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000004  @delay_ms1
-00002C  MAIN
 00002C  @cinit1
-00004E  @cinit2
+00002C  MAIN
+00003C  @cinit2
 0136  StrtoulGO
 0136  StrtolGO
 
@@ -36,7 +36,7 @@ Project Directory:
     C:\Users\L-L-Z\OneDrive\Documentos\Sistemas Embebidos Alumnos\ejercicio1\
 
 Project Files:
-    Ejercicio1.c                                            [18-jun.-19 13:16  CRC=64BA6049]
+    Ejercicio1.c                                            [18-jun.-19 14:19  CRC=E8AC5867]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4620.h [10-sep.-13 17:34  CRC=044A57BA]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-jun.-11 15:39  CRC=0B6669CF]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-jul.-10 10:27  CRC=897CEC6C]
@@ -44,7 +44,7 @@ Project Files:
     ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-ene.-08 14:55  CRC=2D1F019F]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h [31-jul.-07 14:24  CRC=4E4534F4]
 
-Source signature=EB7F6654
+Source signature=6F715E72
 
 Units:
     Ejercicio1 (main)

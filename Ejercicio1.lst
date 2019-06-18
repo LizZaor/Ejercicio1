@@ -1,9 +1,9 @@
-CCS PCH C Compiler, Version 5.012, 41559               18-jun.-19 13:16
+CCS PCH C Compiler, Version 5.012, 41559               18-jun.-19 14:19
 
                Filename:   C:\Users\L-L-Z\OneDrive\Documentos\Sistemas Embebidos Alumnos\ejercicio1\Ejercicio1.lst
 
-               ROM used:   108 bytes (0%)
-                           Largest free fragment is 65428
+               ROM used:   94 bytes (0%)
+                           Largest free fragment is 65442
                RAM used:   10 (0%) at main() level
                            11 (0%) worst case
                Stack used: 1 locations
@@ -2411,14 +2411,14 @@ CCS PCH C Compiler, Version 5.012, 41559               18-jun.-19 13:16
 00028:  BRA    000E
 0002A:  RETURN 0
 ....................  
-.................... #define __DEBUG_SERIAL__ //Si comentas esta linea se deshabilita el debug por serial y el PIN_C6 puede ser usado en forma digital I/O 
+.................... /*#define __DEBUG_SERIAL__ //Si comentas esta linea se deshabilita el debug por serial y el PIN_C6 puede ser usado en forma digital I/O 
 ....................  
 .................... #ifdef __DEBUG_SERIAL__ 
 ....................    #define TX_232        PIN_C6 
 ....................    #define RX_232        PIN_C7 
 ....................    #use RS232(BAUD=9600, XMIT=TX_232, BITS=8,PARITY=N, STOP=1,UART1,RCV=RX_232) 
 ....................    #use fast_io(c) 
-.................... #endif  
+.................... #endif */ 
 .................... //#int_rda 
 .................... //void isr_rda(void){ 
 ....................      
@@ -2430,44 +2430,38 @@ CCS PCH C Compiler, Version 5.012, 41559               18-jun.-19 13:16
 .................... void main(void){ 
 0002C:  CLRF   FF8
 0002E:  BCF    FD0.7
-00030:  BSF    FB8.3
-00032:  MOVLW  A0
-00034:  MOVWF  FAF
-00036:  MOVLW  01
-00038:  MOVWF  FB0
-0003A:  MOVLW  A6
-0003C:  MOVWF  FAC
-0003E:  MOVLW  90
-00040:  MOVWF  FAB
-00042:  MOVF   FC1,W
-00044:  ANDLW  C0
-00046:  IORLW  0F
-00048:  MOVWF  FC1
-0004A:  MOVLW  07
-0004C:  MOVWF  FB4
-0004E:  CLRF   04
-00050:  CLRF   05
-.................... set_tris_c(0x00);  
-00052:  MOVLW  00
-00054:  MOVWF  F94
+00030:  MOVF   FC1,W
+00032:  ANDLW  C0
+00034:  IORLW  0F
+00036:  MOVWF  FC1
+00038:  MOVLW  07
+0003A:  MOVWF  FB4
+0003C:  CLRF   04
+0003E:  CLRF   05
+.................... set_tris_c(0x33);  
+00040:  MOVLW  33
+00042:  MOVWF  F94
 .................... while(1){ 
-....................     output_c(1); 
-00056:  MOVLW  01
-00058:  MOVWF  F8B
+....................     output_c(0xcc); 
+00044:  CLRF   F94
+00046:  MOVLW  CC
+00048:  MOVWF  F8B
 ....................     delay_ms(200); 
-0005A:  MOVLW  C8
-0005C:  MOVWF  0A
-0005E:  RCALL  0004
-....................     output_c(0); 
-00060:  CLRF   F8B
+0004A:  MOVLW  C8
+0004C:  MOVWF  0A
+0004E:  RCALL  0004
+....................     output_c(0x00); 
+00050:  CLRF   F94
+00052:  CLRF   F8B
 ....................     delay_ms(100); 
-00062:  MOVLW  64
-00064:  MOVWF  0A
-00066:  RCALL  0004
-00068:  BRA    0056
+00054:  MOVLW  64
+00056:  MOVWF  0A
+00058:  RCALL  0004
+0005A:  BRA    0044
+....................     
 ....................     } 
 .................... } 
-0006A:  SLEEP 
+0005C:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0200   HS NOFCMEN NOIESO
